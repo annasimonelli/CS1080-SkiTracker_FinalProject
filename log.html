@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Log a Ski Day</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="log.html">Log Day</a>
+            <a href="dashboard.html">My Days</a>
+            <a href="conditions.html">Conditions</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>New Ski Day</h2>
+
+            <form id="skiForm">
+
+                <!-- Location -->
+                <label for="location">Location *</label>
+                <select id="location" required>
+                    <option value="">Select Resort</option>
+                    <option value="Mad River Glen">Mad River Glen</option>
+                    <option value="Smugglers Notch">Smugglers Notch</option>
+                    <option value="Backcountry">Backcountry</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <!-- Date -->
+                <label for="date">Date *</label>
+                <input type="date" id="date" required>
+
+                <!-- Conditions -->
+                <label for="conditions">Conditions</label>
+                <select id="conditions">
+                    <option value="">Select Conditions</option>
+                    <option value="Powder">Powder</option>
+                    <option value="Icy">Icy</option>
+                    <option value="Groomed">Groomed</option>
+                    <option value="Slushy">Slushy</option>
+                </select>
+
+                <!-- Runs -->
+                <label for="runs">Runs</label>
+                <input type="number" id="runs" min="0" placeholder="Number of runs">
+
+                <!-- Rating -->
+                <label for="rating">Rating (1–5) *</label>
+                <input type="number" id="rating" min="1" max="5" required>
+
+                <!-- Comments -->
+                <label for="comment">Comments</label>
+                <input type="text" id="comment" placeholder="Optional comments">
+
+                <button type="submit">Save Day</button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+    </main>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
